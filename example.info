@@ -1,0 +1,6 @@
+name = Example
+description = The simplest possible example theme. 
+version = VERSION
+core = 7.x
+engine = phptemplate
+base theme = bartik
