@@ -1,0 +1,47 @@
+/* Example CSS */
+
+#contentContainer{
+	margin:0px auto;
+	width:960px;
+	}
+
+#groceryList{
+	margin:15px 0px 30px;
+	}
+	
+#groceryList li{
+	cursor:pointer;
+	}
+
+li.stripe{
+	background-color:#999;
+	}
+
+/* Simple Expander example */
+#exampleAccordion{
+	margin:30px 0px;
+	padding:15px 0px;
+	}
+
+#exampleAccordion article{
+	cursor:pointer;
+	display:block;
+	background-color:#999;
+	border-radius:10px;
+	padding:5px 20px;
+	margin-bottom:15px;
+	}
+
+#exampleAccordion article p{
+	display:none;
+	border-top:1px solid #FFF;
+	padding-top:15px;
+	}
+	
+#cycleExample{
+	padding-top:30px;
+	}
+
+#cycleExample li{
+	list-style-type:none;
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="example.css">
+	</head>
+
+	<body>
+		<div id="contentContainer">
+			<h1>Beginner jQuery Examples:</h1>
+			<h2>Grocery List</h2>
+			<ul id="groceryList">
+				<li>Bananas</li>
+				<li>Captain Crunch</li>
+				<li>Cheesecake</li>
+				<li>Funfetti Cake</li>
+				<li>A Tomato</li>
+				<li>Burritos</li>
+			</ul>
+			<hr/>
+			<section id="exampleAccordion">
+				<h2>Simple DIY Expanders / Accordions!</h2>
+				<article>
+					<h3>Why are burritos amazing?</h3>
+					<p>Burritos are amazing because they have everything you need in them.
+					They frequently contain every food group in the food pyramid all at
+					once, and also taste amazing. They also can contian upwards of 3,000
+					calories, which is a feat that took the military years to accomplish!</p>
+				</article>
+				<article>
+					<h3>What is cheesecake really made of?</h3>
+					<p>Cheesecake is actually made from 100% pure awesomeness, harnessed
+					in the form of a cheesy cake. I stopped writing here to go get some.</p>
+				</article>
+				<article>
+					<h3>How many muffins are in my kitchen right now?</h3>
+					<p>None, I at them all at once! BOOYA MUFFINS!</p>
+				</article>
+				<article>
+					<h3>How much wood could a wood chuck chuck...</h3>
+					<p>...if a wood chuck could chuck wood?</p>
+				</article>
+			</section>
+			<hr/>
+			<section id="cycleExample">
+				<h2>Example of how easy jQuery Plugins are (Cycle)</h2>
+				<script src="jquery.cycle.all.js"></script>
+				<ul>
+					<li><img src="http://www.ilovenewmexicoblog.com/wp-content/uploads/2011/06/king-ranch-casserole-l.jpg"/></li>
+					<li><img src="http://blasshomes.blasshomes.netdna-cdn.com/wp-content/uploads/2012/01/tucson-restaurants.jpg"/></li>
+					<li><img src="http://img4-1.coastalliving.timeinc.net/i/2010/05/avocado-corn-dip-l.jpg?400:400"/></li>
+					<li><img src="http://oscarsmexicanseafood.com/wp-content/uploads/2011/12/ceviche-taco-at-oscars-mexican-seafood.jpg"/></li>
+				</ul>
+			</section>
+			
+			
+			
+			<script type="text/javascript">
+				/* Add simple striping by identifying even classes */
+				$('#groceryList li:even').addClass('stripe');
+				
+				/* Add an Onclick event */
+				
+				$('#groceryList li').click(function(){
+					alert('This is a simple click event!')
+					$(this).css('background-color','red');
+				});
+			
+				
+				/* Demonstrate easy DIY expander */
+				
+				$('#exampleAccordion article').click(function(){
+					$('#exampleAccordion article p').slideDown(800);
+				});
+				
+				
+				/* Demonstrate easy DIY accordion */
+				
+				$('#exampleAccordion article').click(function(){
+					$('p',this).toggle(800);
+				});
+				
+				
+				/* Use the jQuery Cycle plug in */
+				
+				$('#cycleExample ul').cycle();
+				
+				
+			</script>
+		</div>
+	</body>
+</html>
